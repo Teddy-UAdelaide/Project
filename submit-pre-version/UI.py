@@ -17,7 +17,6 @@ def handleClear():
     textEdit2.clear()
 
 
-
 app = QApplication([])
 
 window = QMainWindow()
