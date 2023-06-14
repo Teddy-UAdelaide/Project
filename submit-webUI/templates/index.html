@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <form id="code_form">
+        <div class="container">
+            <div class="input-container">
+                <textarea id="input_text" name="input_text" placeholder="Please enter the JAVA code."></textarea>
+                <div class="button-wrapper">
+                    <button type="button" id="start_button">START</button>
+                </div>
+            </div>
+            <div class="output-container">
+                <textarea id="output_text" placeholder="output python code" readonly></textarea>
+                <div class="button-wrapper">
+                    <button type="button" id="reset_button">RESET</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        document.getElementById("start_button").addEventListener("click", handleCalc);
+        document.getElementById("reset_button").addEventListener("click", handleClear);
+    </script>
+</body>
+</html>
